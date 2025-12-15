@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Peer Review Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <h2>Login</h2>
+
+    <form onsubmit="return checkLogin()">
+      <label>Username:</label>         
+      <input type="text" id="username" placeholder="Enter username" required>
+
+      <label>Password:</label>
+      <input type="password" id="password" placeholder="Enter password" required>
+
+      <button type="submit" class="btn">Login</button>
+      <p id="error" class="error"></p>
+
+  </div>
+
+  <script>e3
+    function checkLogin() {
+       user = document.getElementById("username").value;
+       pass = document.getElementById("password").value;
+       error = document.getElementById("error");
+
+      if (user == "karthik" && pass == "31901") {
+        window.location.href = "home.html";
+      }
+        if (user == "sujith" && pass == "31904") {
+        window.location.href = "home.html";
+        }
+        if (user == "rakesh" && pass == "31730") {
+        window.location.href = "home.html";
+      } else if (user == "admin" && pass == "admin123") {
+        window.location.href = "admin-home.html";
+      } else {
+        error.textContent = "Incorrect username or password!";
+        error.style.color = "red";
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
